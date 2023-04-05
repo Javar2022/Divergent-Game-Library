@@ -10,7 +10,7 @@ var Canvas = (function () {
       canvas.width = "256px";
       canvas.height = "256px";
       document.querySelector("body").appendChild(canvas);
-      this.ctx = document.getElementById("render");
+      this.ctx = document.getElementById("render").getContext("2d");
     },
     setSize : function (width, height) {
       var canvas = this.ctx !== null ? this.ctx : alert("Cannot set dimensions of uninitialized canvas");
@@ -19,6 +19,6 @@ var Canvas = (function () {
     }
   };
   
-  return Canvas;
+  return obj;
 })();
 
